@@ -314,5 +314,182 @@ $
 
 ```bash
 
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ checkout ft/faq-page
+bash: checkout: command not found
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ ls
+README.md
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git add README.md
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git commit -m "changed sthg in readme"
+[main b9b12b7] changed sthg in readme
+ 1 file changed, 5 insertions(+)
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 295 bytes | 295.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Niyonyungu/Git-exercise-solution.git
+   8ba8aa8..b9b12b7  main -> main
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ checkout ft/home-page-redesign
+bash: checkout: command not found
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git log
+commit 5a4d6a22e1d89f84c7624340963b7acbb34b615d (HEAD -> ft/home-page-redesign)
+Author: Michel vainqueur <vainqueurmg@gmail.com>
+Date:   Wed May 17 23:38:07 2023 +0200
+
+    Qa!
+                                  ^B^B^B^B^B^B^B^BBBBBBBBBBBNNG
+
+commit 87955b12197bcb06accb09b2c6923179abd3bb44
+Author: Michel vainqueur <vainqueurmg@gmail.com>
+Date:   Wed May 17 23:32:13 2023 +0200
+
+    added faq page
+
+commit ed53faf1963ecf5a4d75ea8bc803c0191ee245f7
+Author: Michel vainqueur <vainqueurmg@gmail.com>
+Date:   Wed May 17 23:26:35 2023 +0200
+
+    added contact page
+
+commit e93b3d5fcb92f8289689f17f9eb8f54126545da7
+Author: Michel vainqueur <vainqueurmg@gmail.com>
+Date:   Wed May 17 23:06:39 2023 +0200
+
+    create team page
+
+commit b9b12b7946a8183af969bb864316485c0320b419 (origin/main, main)
+Author: Michel vainqueur <vainqueurmg@gmail.com>
+Date:   Thu May 18 00:05:24 2023 +0200
+
+    changed sthg in readme
+
+commit 8ba8aa86d1072b711f4106e3698568409edb851e
+Author: Michel vainqueur <vainqueurmg@gmail.com>
+Date:   Wed May 17 23:59:06 2023 +0200
+
+    final exercise 1
+
+commit a0433816918efc3a5d3a5bb5d8b8aaaf40574efa
+Author: Michel vainqueur <vainqueurmg@gmail.com>
+Date:   Wed May 17 23:01:35 2023 +0200
+
+    readme file
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git add home.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git commit -m "modified home page"
+[ft/home-page-redesign 731bf27] modified home page
+ 1 file changed, 16 insertions(+)
+ create mode 100644 home.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.48 KiB | 759.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Niyonyungu/Git-exercise-solution/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Niyonyungu/Git-exercise-solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/home-page-redesign)
+$
+
 
 ```
