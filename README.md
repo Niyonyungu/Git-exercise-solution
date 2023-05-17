@@ -493,3 +493,67 @@ $
 
 
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git remote add git-copy https://github.com/Niyonyungu/Git-Exercise-bundle-4.git
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git remote
+git-copy
+origin
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git add home.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git commit -m "modified home"
+[main 336afd0] modified home
+ 1 file changed, 17 insertions(+)
+ create mode 100644 home.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 510 bytes | 510.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Niyonyungu/Git-exercise-solution.git
+   574c20b..336afd0  main -> main
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git push git-copy
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (15/15), 3.80 KiB | 972.00 KiB/s, done.
+Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Niyonyungu/Git-Exercise-bundle-4.git
+ * [new branch]      main -> main
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$
+
+
+```
