@@ -557,3 +557,149 @@ $
 
 
 ```
+
+### Exercise 2
+
+```bash
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ checkout -b ft/footer
+bash: checkout: command not found
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git checkout ft/footer
+error: pathspec 'ft/footer' did not match any file(s) known to git
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git status
+On branch ft/footer
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git add footer.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git commit -m "added footer page"
+[ft/footer 0c536a2] added footer page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 footer.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git add footer.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git status
+On branch ft/footer
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   footer.html
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git commit -m "added some heading"
+[ft/footer 93d1de0] added some heading
+ 1 file changed, 15 insertions(+)
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 790 bytes | 197.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Niyonyungu/Git-exercise-solution/pull/new/ft/footer
+remote:
+To https://github.com/Niyonyungu/Git-exercise-solution.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/squashing)
+$ git merge --squash ft/footer
+Updating 93ed025..93d1de0
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 footer.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing b993e11] footer changes squashing
+ 1 file changed, 15 insertions(+)
+ create mode 100644 footer.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/squashing)
+$  git push --set-upstream origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 514 bytes | 257.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Niyonyungu/Git-exercise-solution/pull/new/ft/squashing
+remote:
+To https://github.com/Niyonyungu/Git-exercise-solution.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Bundle-3&4 (ft/squashing)
+$
+
+
+
+```
